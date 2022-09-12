@@ -49,39 +49,39 @@ const ExpectedProfit = () => {
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Label style={{ paddingRight: "20px" }}>Multiple</Form.Label>
             <Form.Check
-              name="group1"
+              name="group2"
               inline
               onClick={(e) => setMulti(e.target.value)}
               value={1.3}
               type="radio"
-              id="1"
+              id="5"
               label="1.3x"
             />
             <Form.Check
-              name="group1"
+              name="group2"
               inline
               onClick={(e) => setMulti(e.target.value)}
               value={1.4}
               type="radio"
-              id="1"
+              id="6"
               label="1.4x"
             />
             <Form.Check
-              name="group1"
+              name="group2"
               inline
               onClick={(e) => setMulti(e.target.value)}
               value={1.5}
               type="radio"
-              id="1"
+              id="7"
               label="1.5x"
             />
             <Form.Check
-              name="group1"
+              name="group2"
               inline
               onClick={(e) => setMulti(e.target.value)}
               value={1.6}
               type="radio"
-              id="1"
+              id="8"
               label="1.6x"
             />
 

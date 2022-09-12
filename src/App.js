@@ -80,7 +80,7 @@ function App() {
             onClick={(e) => setMulti(e.target.value)}
             value={1.4}
             type="radio"
-            id="1"
+            id="2"
             label="1.4x"
           />
           <Form.Check
@@ -89,7 +89,7 @@ function App() {
             onClick={(e) => setMulti(e.target.value)}
             value={1.5}
             type="radio"
-            id="1"
+            id="3"
             label="1.5x"
           />
           <Form.Check
@@ -98,7 +98,7 @@ function App() {
             onClick={(e) => setMulti(e.target.value)}
             value={1.6}
             type="radio"
-            id="1"
+            id="4"
             label="1.6x"
           />
 

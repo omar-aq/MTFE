@@ -8,6 +8,10 @@ import {
   DropdownButton,
   InputGroup,
 } from "react-bootstrap/";
+//components
+// import ExpectedProfitTable from "./ExpectedProfitTable";
+//hook
+// import useFunds from "./useFunds";
 
 const ExpectedProfit = () => {
   const [amount, setAmount] = useState("");
@@ -16,7 +20,8 @@ const ExpectedProfit = () => {
   const [show, setShow] = useState(false);
   let funds = amount;
   let arr = new Array(20).fill(0);
-
+  // const data = useFunds(type, multi, funds);
+  // console.log(data);
   return (
     <>
       <h1 className="App">Expected Profit For 20 Days</h1>
@@ -84,7 +89,6 @@ const ExpectedProfit = () => {
               id="8"
               label="1.6x"
             />
-
             <Form.Text className="text-muted">
               The multiple we'll be 1.5 by default.
             </Form.Text>
@@ -116,17 +120,18 @@ const ExpectedProfit = () => {
                 service = (lot * 42).toFixed(2);
                 closePrice = (service * multi).toFixed(2);
                 profit = (closePrice - service).toFixed(2);
-                funds = parseInt(funds) + parseInt(profit);
+                funds = +funds + +profit;
               } else if (type === "EWD") {
                 lot = (funds / 1280).toFixed(5);
                 service = (lot * 80).toFixed(2);
                 closePrice = (service * multi).toFixed(2);
                 profit = (closePrice - service).toFixed(2);
-                funds = parseInt(funds) + parseInt(profit);
+                funds = +funds + profit;
               }
+
               return (
                 <tr key={index}>
-                  <td>{funds}</td>
+                  <td>{funds.toFixed(2)}</td>
                   <td>
                     {index + 1} {type}
                   </td>
